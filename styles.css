@@ -105,31 +105,15 @@
   display: block;
   color:white;
 }
+
+body.no-scroll {
+  overflow: hidden; 
+}
+
 .hamburger:hover{
   color: red;
 }
 
-
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); 
-  z-index: 900; 
-  display: none;  
-}
-
-.backdrop.show {
-  display: block; 
-}
-
-
-
-.navbar-menu {
-  transition: right 0.5s ease; 
-}
 
 
 }
