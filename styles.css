@@ -9,6 +9,8 @@
     line-height: 1.6;
 }
 
+
+
  html, body {
     height: 100%;
     display: flex;
@@ -75,29 +77,62 @@
 
 
 @media (max-width: 768px) {
-  .navbar-menu {
-      display: none; 
-      flex-direction: column;
-      position: absolute;
-      top: 60px; 
-      right: 0;
-      background-color:cadetblue;
-      width: 200px; 
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      padding: 10px;
-      z-index: 1000;
-  }
+ 
 
-  .navbar-menu.show {
-      display: flex; 
-  }
-
-  .hamburger {
-      display: block; 
-      color:wheat;
-  }
+.navbar-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;  
+  height: 100vh;  
+  width: 75%;  
+  max-width: 263px;  
+  background-color: #333;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.5);
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 30px 20px;
+  transition: right 0.5s ease;  
+  z-index: 1000;
 }
 
+
+.navbar-menu.show {
+  right: 0;  
+}
+
+
+.hamburger {
+  display: block;
+  color:white;
+}
+.hamburger:hover{
+  color: red;
+}
+
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 900; 
+  display: none;  
+}
+
+.backdrop.show {
+  display: block; 
+}
+
+
+
+.navbar-menu {
+  transition: right 0.5s ease; 
+}
+
+
+}
 
 
 main {
